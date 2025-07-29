@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Zone Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lottie player -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow: hidden;
+    }
+
+    body {
+      background: url('bgadd.jpg') no-repeat center center/cover;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      height: calc(100% - 4rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1rem;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .animate-zoomIn {
+      animation: zoomIn 1.2s ease-in-out;
+    }
+
+    button.download-btn {
+      background-color: #e50914;
+      color: white;
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(229, 9, 20, 0.6);
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.5s ease forwards;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    button.download-btn:hover {
+      background-color: #b20710;
+      transform: scale(1.08);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    lottie-player {
+      width: 60px !important;
+      height: 60px !important;
+      display: inline-block !important;
+      vertical-align: middle;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.4;
+      }
+
+      button.download-btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+
+      lottie-player {
+         width: 40px !important;
+      height: 40px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="pt-6 px-4 sm:px-8 flex justify-between items-center">
+    <h1 class="text-white text-4xl font-bold"><a href="movies.html">Movie Zone</a></h1>
+    <a href="https://telegram.me/+NafL2DWmZVUwY2I1" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold transition">Watch Now</a>
+  </header>
+
+  <main>
+    <div class="flex flex-col items-center justify-center text-center px-4">
+      <h1 class="text-white text-[1.5rem] sm:text-[2rem] md:text-[2.5rem] lg:text-[2.8rem] font-extrabold leading-tight animate-zoomIn">
+        Free Full HD Movies<br>
+        Watch And Download now
+          <lottie-player 
+          src="json/4yvSYfiX4E.json" 
+          background="transparent" speed="1" loop autoplay></lottie-player>
+      </h1>
+      <br>
+      <a href="https://telegram.me/+NafL2DWmZVUwY2I1">
+      <button class="download-btn" aria-label="Download HD Movies button">
+        Download HD Movies
+          <lottie-player 
+          src="json/SM8vXiqlns.json" 
+          background="transparent" speed="1" loop autoplay></lottie-player>
+      </button>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
